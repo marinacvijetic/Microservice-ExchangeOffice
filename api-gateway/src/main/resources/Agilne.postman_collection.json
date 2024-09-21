@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "aebdade2-0836-4404-bc38-50979da47640",
+		"name": "Agilne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16992285"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "ALL USERS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "vladimir_fabri98@uns.ac.rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/user-service/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"user-service",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NEW USER",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "vladimir_fabri98@uns.ac.rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"zorana@gmail.com\",\r\n        \"password\": \"password\",\r\n        \"role\": \"USER\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/user-service/users/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"user-service",
+								"users",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update USER",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "vladimir_fabri98@uns.ac.rs",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"zorana@gmail.com\",\r\n        \"password\": \"passwordChanged\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/user-service/users/updateUser/zorana@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"user-service",
+								"users",
+								"updateUser",
+								"zorana@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "marinacvijetic2@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/user-service/users/removeUser/zorana@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"user-service",
+								"users",
+								"removeUser",
+								"zorana@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bank Account",
+			"item": [
+				{
+					"name": "See Account",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "zorana@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8200/bank-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8200",
+							"path": [
+								"bank-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Account",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "vladimir_fabri98@uns.ac.rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"zorana@gmail.com\",\r\n        \"eur\": 200.00,\r\n        \"rsd\": 500.00,\r\n        \"gbp\": 800.00,\r\n        \"usd\": 2000.00,\r\n        \"rub\": 600.00,\r\n        \"chf\": 100.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/bank-account/editAccount/zorana@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"bank-account",
+								"editAccount",
+								"zorana@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Currency Conversion",
+			"item": [
+				{
+					"name": "EUR>RSD",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "milos_tod@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/currency-conversion?from=EUR&to=RSD&quantity=50",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"currency-conversion"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "EUR"
+								},
+								{
+									"key": "to",
+									"value": "RSD"
+								},
+								{
+									"key": "quantity",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Currency Exchange",
+			"item": [
+				{
+					"name": "Eur>RSD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8765/currency-exchange/from/EUR/to/RSD",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"currency-exchange",
+								"from",
+								"EUR",
+								"to",
+								"RSD"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crypto Wallet",
+			"item": [
+				{
+					"name": "See Account",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "ivana@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8300/crypto-wallet",
+							"host": [
+								"localhost"
+							],
+							"port": "8300",
+							"path": [
+								"crypto-wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Wallet",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "vladimir_fabri98@uns.ac.rs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{,\r\n        \"xrp\": 1500.00,\r\n        \"eth\": 23.00,\r\n        \"btc\": 3232.50,\r\n        \"email\": \"zorana@gmail.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8765/crypto-wallet/editWallet/zorana@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"crypto-wallet",
+								"editWallet",
+								"zorana@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crypto conversion",
+			"item": [
+				{
+					"name": "BTC to ETH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "milos_tod@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/crypto-conversion?from=BTC&to=ETH&quantity=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"crypto-conversion"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "BTC"
+								},
+								{
+									"key": "to",
+									"value": "ETH"
+								},
+								{
+									"key": "quantity",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
